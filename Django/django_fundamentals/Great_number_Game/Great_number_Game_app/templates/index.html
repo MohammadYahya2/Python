@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcom to Great Number Game!</h1>
+    <p>i am thinking of a number between 1 and 100 </p>
+    
+    <div style="display: flex;align-items: center;justify-content: center;">
+        <form action="check_guess" method="post">
+            <p>Take a guess!</p>
+            {% csrf_token %}
+            <label for="username">Your number : </label>
+            <input type="text" name="guess" placeholder="input" />
+            <button style="background-color: cornflowerblue; width: 85px;height: 25px; color: white; margin: 5px; box-shadow: 1px 2px 1px  black;">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
