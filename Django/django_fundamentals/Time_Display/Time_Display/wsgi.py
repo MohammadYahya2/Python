@@ -1,5 +1,5 @@
 """
-WSGI config for users_project project.
+WSGI config for Time_Display project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'users_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Time_Display.settings')
 
 application = get_wsgi_application()

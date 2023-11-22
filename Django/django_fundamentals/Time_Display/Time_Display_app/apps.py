@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class UsersAppConfig(AppConfig):
+class TimeDisplayAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'users_app'
+    name = 'Time_Display_app'
