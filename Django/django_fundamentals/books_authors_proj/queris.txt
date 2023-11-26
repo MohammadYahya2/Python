@@ -1,0 +1,25 @@
+Book.objects.create(title='it ends with us',desc='is very nice book')
+Book.objects.create(title='lilaa',desc='is very nice story')
+Book.objects.create(title='hi my name is jack',desc='is very cool book')
+Book.objects.create(title='cooking',desc='is very nice cookj')
+Book.objects.create(title='cooking',desc='is very nice cookj')
+==============================================================================
+Author.objects.create(first_name='Mohammad',last_name='Yahya')
+Author.objects.create(first_name='jamal',last_name='laml')
+Author.objects.create(first_name='mostafa',last_name='ali')
+Author.objects.create(first_name='taha',last_name='lala')
+Author.objects.create(first_name='mohamad',last_name='issa')
+========================================================================
+book1_to_update = Book.objects.get(title='c')
+book1_to_update.title='c#'
+book1_to_update.save()
+[1:22 PM]
+author_update = Author.objects.get(id=4)
+author_update.first_name ='Bill'
+author_update.save()
+=========================================================================
+Author1 =Author.objects.get(id=1)
+book1= Book.objects.get(id=1)
+book2= Book.objects.get(id=2)
+Author1.Book.add(book1)
+===========================
