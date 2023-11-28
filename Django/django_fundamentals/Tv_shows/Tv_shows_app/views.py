@@ -41,12 +41,15 @@ def showDetail(request , id):
 
 def editing(request , id):
     this_show = Show.objects.get(id=id)
+    
     context ={
 
 "this_show" : this_show
 
 
     }
+    
+    
     return render(request,"editform.html",context)
 
 

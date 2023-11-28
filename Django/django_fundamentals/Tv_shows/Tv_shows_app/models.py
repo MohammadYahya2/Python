@@ -7,3 +7,5 @@ class Show(models.Model):
     description = models.TextField()
     created_at= models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def formatted_updated_at(self):
+        return self.updated_at.strftime('%m %d %Y')
