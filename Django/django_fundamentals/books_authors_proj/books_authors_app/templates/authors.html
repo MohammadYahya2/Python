@@ -10,11 +10,12 @@
     <body>
         <div id="wrapper">
             <div id="form">
-                <h2>Add a Book</h2>
-                <form action="/new_book" method="POST">
+                <h2>Add an Author</h2>
+                <form action="/new_author" method="POST">
                 {% csrf_token %}
-                    <p>Title: <input id="title_input" name = "title" type="text" required></p>
-                    <p>Description: <textarea name = "desc" required></textarea></p>
+                    <p>First Name: <input id="fn_input" name = "first_name" type="text" required></p>
+                    <p>Last Name: <input id="ln_input" name = "last_name" type="text" required></p>
+                    <p>Notes: <textarea id="notes" name = "notes" required></textarea></p>
                     <button type="submit">Add</button>
                 </form>
             </div> 
@@ -22,18 +23,18 @@
                 <table>
                     <tr>
                         <th>ID</th>
-                        <th>Title</th>
+                        <th>Name</th>
                         <th>Action</th>
                     </tr>
-                    {% for book in all_the_books %}
+                    {% for author in all_the_authors %}
                         <tr>
-                            <td>{{book.id}}</td>
-                            <td>{{book.title}}</td>
-                            <td><a href= "/books/{{book.id}}">View</a></td>
+                            <td>{{author.id}}</td>
+                            <td>{{author.first_name}} {{author.last_name}}</td>
+                            <td><a href= "/authors/{{author.id}}">View</a></td>
                         </tr>
                     {% endfor %}
                 </table>
             </div>  
-        </div> 
+        </div> <
     </body>
 </html>
