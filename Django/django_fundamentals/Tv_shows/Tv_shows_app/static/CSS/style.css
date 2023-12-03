@@ -1,14 +1,3 @@
-h1{
-    color:aqua
-}
-form{
-    border: 1px solid black;
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: column;
-}
-/* CSS/style.css */
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -45,7 +34,7 @@ textarea {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #92b393;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -64,25 +53,13 @@ a {
     display: inline-block;
 }
 
-
-.show{
+.show,
+.table,
+form {
     border: 1px solid black;
     background-color: antiquewhite;
     display: flex;
     flex-direction: column;
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-}
-.table{
-
-    border: 1px solid black;
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: column;
-    display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #333;

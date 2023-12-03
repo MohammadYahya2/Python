@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 15px;
+            background-color: rgb(212, 240, 240);
+            display: flex;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+<h1> Add a Book</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="">Title</label>
+    <input type="text" name="title">
+    <label for="">Description</label>
+    <input type="text" name="desc" >
+    <label for="">Title</label>
+    <input type="submit" name="add">Add
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Title</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tr>
+            {% for Book in Books %}
+        </tr>
+        <tr>
+            <td>{{Book.id}}</td>
+            <td>{{Book.title}}</td>
+            <td><a  href="/books/{{Books.id}}">View</a>
+        </tr>
+    </table>
+    {% endfor %}
+</form>
+</body>
+</html>

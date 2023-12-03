@@ -10,19 +10,28 @@
 <body>
 
 <h1>Add a new show </h1>
-    <form action="/shows/create" method="post">
+<form action="/shows/create" method="post">
         {% csrf_token %}
     <label >title</label>
-    <input type="text" name="title">
+    <input type="text" name="Title" required>
     <label >Network</label>
     <input type="text" name="Network">
     <label >Date</label>
     <input type="date" name="Date">
     <label >Dec</label>
-    <textarea name="Dec" id="" cols="30" rows="10" ></textarea>
-    <button type="submit" name="submit">Great</button>
+    <textarea name="description" id="" cols="30" rows="10" ></textarea>
+    <button type="submit" name="submit">Create</button>
 
 </form>
+
+{% if messages %}
+<ul class="messages">    
+    {% for message in messages %}    
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+    {% endfor %}
+</ul>
+{% endif %}
+
 <a href="/shows"name="">Go Back</a>
 </body>
 </html>

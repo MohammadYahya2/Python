@@ -1,5 +1,5 @@
 """
-URL configuration for books_authors_proj project.
+URL configuration for book_author_temp project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -18,6 +18,5 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    
-    path('' , include('books_authors_app.urls')),
+    path('' , include('book_author_app.urls')),
 ]
